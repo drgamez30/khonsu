@@ -1,0 +1,403 @@
+/* ==================================================
+RESET
+================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#222;
+overflow-x:hidden;
+}
+
+
+/* ==================================================
+HEADER
+================================================== */
+
+header{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 70px;
+background:#ffffff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 15px rgba(0,0,0,.04);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo img{
+height:58px;
+width:auto;
+}
+
+.logo-text h2{
+font-size:30px;
+font-weight:900;
+letter-spacing:1px;
+color:#e86ba5;
+line-height:1;
+}
+
+.logo-text span{
+font-size:13px;
+color:#666;
+letter-spacing:.5px;
+}
+
+
+/* ==================================================
+MENU
+================================================== */
+
+nav{
+display:flex;
+align-items:center;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-size:16px;
+font-weight:700;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e86ba5;
+}
+
+
+/* ==================================================
+HERO
+================================================== */
+
+.hero{
+width:100%;
+min-height:520px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:40px 70px;
+background:#fdf5f8;
+overflow:hidden;
+gap:40px;
+}
+
+
+/* TEXTO */
+
+.hero-text{
+width:40%;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:72px;
+line-height:1;
+font-weight:900;
+color:#111;
+margin-bottom:25px;
+}
+
+.hero-text span{
+color:#e86ba5;
+}
+
+.hero-text p{
+font-size:22px;
+line-height:1.6;
+color:#555;
+margin-bottom:35px;
+max-width:600px;
+}
+
+
+/* BOTON */
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:17px 32px;
+background:#25D366;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-size:17px;
+font-weight:700;
+box-shadow:0 10px 25px rgba(37,211,102,.28);
+transition:.3s;
+}
+
+.btn::before{
+content:"☎";
+font-size:18px;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+background:#1ebe5d;
+}
+
+
+/* ==================================================
+IMAGEN HERO
+================================================== */
+
+.hero-bg{
+width:60%;
+height:auto;
+object-fit:contain;
+display:block;
+}
+
+
+/* ==================================================
+SECCIONES
+================================================== */
+
+.section{
+padding:90px 70px;
+}
+
+.title{
+text-align:center;
+font-size:52px;
+font-weight:900;
+margin-bottom:55px;
+color:#111;
+}
+
+
+/* ==================================================
+GRID
+================================================== */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+
+/* ==================================================
+CARDS
+================================================== */
+
+.card{
+background:#fff;
+padding:22px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.img-box{
+height:230px;
+border-radius:22px;
+background:#f7f7f7;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+margin-bottom:18px;
+color:#bbb;
+font-size:15px;
+}
+
+.img-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:16px;
+color:#666;
+margin-bottom:18px;
+}
+
+.card a{
+display:inline-block;
+padding:12px 22px;
+background:#e86ba5;
+color:#fff;
+text-decoration:none;
+border-radius:30px;
+font-weight:700;
+transition:.3s;
+}
+
+.card a:hover{
+background:#d85794;
+}
+
+
+/* ==================================================
+IDEA FINAL
+================================================== */
+
+.idea{
+background:linear-gradient(to right,#fff1f7,#ffffff);
+padding:80px;
+border-radius:35px;
+text-align:center;
+}
+
+.idea h2{
+font-size:54px;
+margin-bottom:20px;
+font-weight:900;
+}
+
+.idea p{
+font-size:20px;
+line-height:1.7;
+color:#666;
+max-width:850px;
+margin:auto;
+margin-bottom:35px;
+}
+
+
+/* ==================================================
+BOTON FLOTANTE
+================================================== */
+
+.float{
+position:fixed;
+right:25px;
+bottom:25px;
+width:68px;
+height:68px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(37,211,102,.40);
+z-index:999;
+transition:.3s;
+}
+
+.float::before{
+content:"✆";
+font-size:32px;
+color:#fff;
+}
+
+.float:hover{
+transform:scale(1.08);
+background:#1ebe5d;
+}
+
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media(max-width:1100px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:60px 30px;
+}
+
+.hero-text{
+width:100%;
+}
+
+.hero-text p{
+margin:auto;
+margin-bottom:35px;
+}
+
+.hero-bg{
+width:100%;
+max-width:700px;
+}
+
+.hero-text h1{
+font-size:58px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+padding:18px 25px;
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+gap:18px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+padding:50px 20px;
+min-height:auto;
+}
+
+.hero-text h1{
+font-size:44px;
+}
+
+.hero-text p{
+font-size:18px;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.title{
+font-size:40px;
+}
+
+.idea{
+padding:50px 25px;
+}
+
+.idea h2{
+font-size:38px;
+}
+
+.idea p{
+font-size:18px;
+}
+
+}
+
